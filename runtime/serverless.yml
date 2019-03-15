@@ -1,0 +1,43 @@
+service: cart-abandonment
+
+package:
+  individually: true
+
+provider:
+  name: openwhisk
+  runtime: nodejs:10
+  ignore_certs: true
+
+custom:
+  ow-package: ${opt:ow-package}
+
+plugins:
+  - serverless-openwhisk
+
+functions:
+  challenge:
+    name: "${self:custom.ow-package}/challenge"
+    handler: challenge.main
+
+  getCart:
+    name: "${self:custom.ow-package}/getCart"
+    handler: getCart.main
+    parameters:
+      config: ${file(magento-config.yaml)}
+
+  campaignCartAbandonment:
+    name: "${self:custom.ow-package}/campaignCartAbandonment"
+    handler: campaignCartAbandonment.main
+    parameters:
+      config: ${file(campaign-config.yaml)}
+
+  cartAbandonment:
+    name: "${self:custom.ow-package}/cartAbandonment"
+    sequence:
+      - challenge
+      - getCart
+      - campaignCartAbandonment
+    annotations:
+      web-export: true
+    package:
+      disable: true

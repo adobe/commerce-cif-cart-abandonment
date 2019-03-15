@@ -1,0 +1,50 @@
+# You can read more about the setup of this config at
+# https://github.com/Adobe/commerce-cif-cart-abandonment/wiki/Campaign.
+
+# API Key / Client ID from I/O Console.
+clientId: "client-id"
+
+# Client secret from I/O Console.
+clientSecret: "client-secret"
+
+# JWT payload from I/O Console.
+jwtPayload:
+  iss: "abc@AdobeOrg"
+  sub: "abc@techacct.adobe.com"
+  https://ims-na1.adobelogin.com/s/ent_campaign_sdk: true
+  aud: "https://ims-na1.adobelogin.com/c/xyz"
+
+# JWT Exchange server.
+jwtExchange: "https://ims-na1.adobelogin.com/ims/exchange/jwt/"
+
+# ID of transactional event that should be sent. You can look this ID up in Campaign.
+eventId: "EVTCIF01"
+
+# Transactional API identifier. You can look this up in Campaign.
+transactionalApi: "mcmy"
+
+# URL to your campaign instance. You can look this up in Campaign.
+organization: "my.campaign-demo.adobe.com"
+
+# Campaign API base path.
+campaignApiHost: "https://mc.adobe.io"
+
+# Url for product pages. {{slug}} will be replaced by the product slug.
+productPageUrl: "http://localhost/product/{{slug}}.html"
+
+# Base url for image paths on products.
+productAssetBaseUrl: "http://my.magentosite.cloud/media/catalog/product"
+
+# Private key that was generated as part of the Campaign API integration setup 
+# in the Adobe I/O console.
+privateKey: |
+  -----BEGIN PRIVATE KEY-----
+  ABCD
+  -----END PRIVATE KEY-----
+
+# Public key that was generated as part of the Campaign API integration setup 
+# in the Adobe I/O console.
+publicKey: |
+  -----BEGIN CERTIFICATE-----
+  ABCD
+  -----END CERTIFICATE-----

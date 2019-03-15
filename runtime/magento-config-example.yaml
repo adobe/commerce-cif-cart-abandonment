@@ -1,0 +1,11 @@
+# URL to Magento instance.
+host: "http://my-magento.com"
+
+# Access token of Magento REST API integration.
+authToken: "auth-token"
+
+# Analytics dimension that contains the customer's cart id.
+analyticsCartIdDimension: "eVar3"
+
+# Analytics dimension that contains the customer's email address.
+analyticsEMailDimension: "eVar4"

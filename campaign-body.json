@@ -1,0 +1,28 @@
+{
+    "email":"user@adobe.com",
+    "ctx": {
+        "total": 1234,
+        "currency": "EUR",
+        "cartId": "cart-id-abc",
+        "products": [
+            {
+                "sku": "product-a",
+                "slug": "product-alpha",
+                "name": "Product A",
+                "path": "https://adobe.com/A",
+                "price": 123,
+                "quantity": 2,
+                "image": "https://static4.cilory.com/273124-large_default/nologo-navy-casual-shirt.jpg"
+            },
+            {
+                "sku": "product-b",
+                "slug": "product-beta",
+                "name": "Product B",
+                "path": "https://adobe.com/B",
+                "price": 456,
+                "quantity": 1,
+                "image": "https://static4.cilory.com/273124-large_default/nologo-navy-casual-shirt.jpg"
+            }
+        ]
+    }
+}
