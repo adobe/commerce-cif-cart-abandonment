@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/adobe/commerce-cif-cart-abandonment.svg?style=svg)](https://circleci.com/gh/adobe/commerce-cif-cart-abandonment)
+[![codecov](https://codecov.io/gh/adobe/commerce-cif-cart-abandonment/branch/master/graph/badge.svg?token=OKEPfTKQ7l)](https://codecov.io/gh/adobe/commerce-cif-cart-abandonment)
+
 # Magento - Campaign integration using Commerce Integration Framework (CIF) for Cart Abandonment
 
 ## Contents

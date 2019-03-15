@@ -9,9 +9,9 @@ jobs:
           name: Build
           command: node ci/build.js
       - store_test_results:
-          path: test/results
+          path: runtime/test/results
       - store_artifacts:
-          path: test/results
+          path: runtime/test/results
 
 workflows:
   version: 2
